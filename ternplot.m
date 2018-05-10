@@ -51,7 +51,7 @@ function handles = ternplot(A, B, C, varargin)
 
 if nargin < 3
     C = 1 - (A+B);
-end;
+end
 
 [varargin, majors] = extractpositional(varargin, 'majors', 10);
 [varargin, sortpoints] = extractpositional(varargin, 'sortpoints', false);

@@ -12,7 +12,8 @@
 %     /   \
 %    c --- a 
 
-% Author: Peter Selkin 20030508 Modified from Carl Sandrock 20020827
+% Author: Joseph McKinsey 20180509 Modified from Peter Selkin 20030508
+%           Modified from Carl Sandrock 20020827
 
 % To Do
 
@@ -20,16 +21,25 @@
 
 % Modifiers
 
-function h = vertexlabel(A, B, C, offset)
+function h = vertexlabel(A, B, C, offset, clockwise, varargin)
 
-if (nargin~=4)
+if (nargin<4)
 	offset=0.03;
 end
+if (nargin<5)
+    clockwise=false;
+end
 
-r(1) = text(-offset, -offset, C, 'horizontalalignment', 'right');
-r(2) = text(1+offset, -offset, A, 'horizontalalignment', 'left');
-r(3) = text(0.5, sin(deg2rad(60))+offset, B, 'horizontalalignment', 'center');
+if clockwise
+    r(1) = text(-offset, -offset, A, 'horizontalalignment', 'right', varargin{:});
+    r(2) = text(1+offset, -offset, B, 'horizontalalignment', 'left', varargin{:});
+    r(3) = text(0.5, sin(deg2rad(60))+offset, C, 'horizontalalignment', 'center', varargin{:});
+else
+    r(1) = text(-offset, -offset, C, 'horizontalalignment', 'right', varargin{:});
+    r(2) = text(1+offset, -offset, A, 'horizontalalignment', 'left', varargin{:});
+    r(3) = text(0.5, sin(deg2rad(60))+offset, B, 'horizontalalignment', 'center', varargin{:});
+end
 
 if nargout > 0
     h = r;
-end;
+end
