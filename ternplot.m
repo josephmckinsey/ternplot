@@ -31,10 +31,10 @@
 %
 %   See also TERNLABEL PLOT POLAR
 
-%       b
+%       c
 %      / \
 %     /   \
-%    c --- a 
+%    a --- b 
 
 % Author: Carl Sandrock 20020827
 

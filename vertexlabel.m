@@ -7,10 +7,10 @@
 %
 %   See also TERNLABEL TERNPLOT TERNCONTOUR TERNCONTOURF
 
-%       b
+%       c
 %      / \
 %     /   \
-%    c --- a 
+%    a --- b 
 
 % Author: Joseph McKinsey 20180509 Modified from Peter Selkin 20030508
 %           Modified from Carl Sandrock 20020827
@@ -27,7 +27,7 @@ if (nargin<4)
 	offset=0.03;
 end
 if (nargin<5)
-    clockwise=false;
+    clockwise=true;
 end
 
 if clockwise

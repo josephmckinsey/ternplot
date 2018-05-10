@@ -3,10 +3,10 @@
 
 %   [X, Y] = TERNARROW(FA, FB) returns the rectangular X and Y directions
 %   for the ternary direction indicated by fA, fB, and fC.
-%       b
+%       c
 %      / \
 %     /   \
-%    c --- a 
+%    a --- b
 
 % Author: JOSEPH MCKINSEY 20180509
 
